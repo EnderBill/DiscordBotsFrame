@@ -1,4 +1,5 @@
 {
+    "owner": 518361466139574278,
     "owners": {
         "余俊昌": 518361466139574278,
         "L": 808322801089249290,
@@ -8,6 +9,6 @@
         "Status": "idle",
         "status": "閒置",
         "activity": "QQ好難的Python",
-        "prefix": null
+        "prefix": "QQ"
     }
 }

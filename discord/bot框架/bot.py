@@ -292,4 +292,4 @@ async def ping(ctx):
     embed.set_footer(text=bot.BotName)
     await ctx.send(embed=embed)
 ####!!!!    啟動程序
-bot.run(os.getenv("TOKEN_Beta"))
+bot.run(os.getenv("TOKEN"))

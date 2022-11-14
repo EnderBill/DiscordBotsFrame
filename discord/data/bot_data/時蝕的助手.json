@@ -1,4 +1,9 @@
 {
     "BotName": "時蝕的助手",
-    "cogs": []
+    "cogs": {
+        "cogs_load": {
+            "system": "auto"
+        },
+        "cogs_unload": {}
+    }
 }

@@ -1,0 +1,26 @@
+{
+    "bot_data" : {
+        "Status": {
+            "online" : "線上",
+            "offline": "隱形",
+            "idle"   : "閒置",
+            "dnd"    : "勿擾",
+            "invisible" : "下線"
+        },
+        "status": {
+            "線上": "online",
+            "隱形": "offline",
+            "閒置": "idle",
+            "勿擾": "dnd",
+            "下線" : "invisible"
+        }
+    },
+    "guilds_data" : {
+        "guild_name" : "",
+        "guild_id" : 0,
+        "join_model" : "False",
+        "join_channel" : 0,
+        "remove_model" : "False",
+        "remove_channel" : 0
+    }
+}
