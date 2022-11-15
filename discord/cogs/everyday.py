@@ -160,11 +160,11 @@ class everyday(Cog_Extension):
                     out=""
                     for i in reversed(users["個人資料"]["簽到記錄"]): 
                         out += f'> {i}\n'                
-                        embed.add_field(
-                            name   = f'{name}({id})的簽到列表',
-                            value  = out,
-                            inline = False
-                            )
+                    embed.add_field(
+                        name   = f'{name}({id})的簽到列表',
+                        value  = out,
+                        inline = False
+                        )
         except: 
             name = ctx.author.name
             id   = ctx.author.id
@@ -180,11 +180,11 @@ class everyday(Cog_Extension):
                     out=""
                     for i in reversed(users["個人資料"]["簽到記錄"]): 
                         out += f'> {i}\n'                
-                        embed.add_field(
-                            name   = f'{name}({id})的簽到列表',
-                            value  = out,
-                            inline = False
-                            )
+                    embed.add_field(
+                        name   = f'{name}({id})的簽到列表',
+                        value  = out,
+                        inline = False
+                        )
         process_in(
             project = 'sign',
             key     = str(datetime.datetime.now()),
