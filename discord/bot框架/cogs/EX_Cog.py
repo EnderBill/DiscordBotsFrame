@@ -3,7 +3,7 @@ class system(Cog_Extension): # Cog庫 繼承 # system 需都相同
     def __init__(self,bot):
         super().__init__(
             bot,
-            cog_name = 'system', # Cog擴充 名 # system 需都相同
+            cog_name = 'EX_Cog', # Cog擴充 檔名
             cog_class= 'auto' # Cog擴充 分類
         )
         self.sign()

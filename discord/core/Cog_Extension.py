@@ -1,12 +1,4 @@
-import json, sys, os, datetime
-import discord, asyncio, typing
-from discord import *
-from discord.ext import commands
-from discord.ext.commands import Cog
-from dotenv import load_dotenv
-load_dotenv()
-sys.path.append("..")
-
+from .function import *
 class Cog_Extension(commands.Cog):
     def __init__(
             self,
@@ -14,13 +6,12 @@ class Cog_Extension(commands.Cog):
             cog_name : str,
             cog_class: str
         ):
+        self.config    = config
+        self.data      = data
         self.bot       = bot
         self.cog_name  = cog_name
         self.cog_class = cog_class
-        with open('config.json', newline='',mode='r',encoding="utf8") as reconfig: 
-            self.config = json.load(reconfig)
-        with open('data.json', newline='',mode='r',encoding="utf8") as datas:
-            self.data = json.load(datas)
+        
     def sign(self):
         with open(f'data\\bot_data\\{self.bot.BotName}.json', newline='',mode='r',encoding="utf8") as self_data: 
             self.datas = json.load(self_data)

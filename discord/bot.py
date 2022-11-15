@@ -10,7 +10,7 @@ class MUOMBots(commands.Bot):
             status         = discord.Status.dnd
         )
         self.synced  = False
-        self.BotName = "時蝕的助手"
+        self.BotName = "爆裂的助手"
         if not os.path.isfile(f'data\\bot_data\\{self.BotName}.json'):
             with open(f'data\\bot_data\\{self.BotName}.json',mode='w',encoding="utf8") as self_data:
                 redata = {
