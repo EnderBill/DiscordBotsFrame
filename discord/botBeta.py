@@ -89,7 +89,7 @@ class MUOMBots(commands.Bot):
                         print('-=-')
                         sign_num=0
                     if not (y=="幸運數字" or y=="貴人星座"):
-                        print(f'-=- >> {y} : {data["fortune"][str(z)]}')
+                        print(f'-=- >> {y} : {data["整體運勢"][str(z)]}')
                     else :  
                         print(f'-=- >> {y} : {str(z)}')
                 print('-=-')

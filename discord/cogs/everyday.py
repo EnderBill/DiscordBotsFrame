@@ -58,7 +58,7 @@ class everyday(Cog_Extension):
             color       = 0xab5bdb,
             timestamp   = datetime.datetime.now()
         )
-        for x,y in data["fortune"].items() :
+        for x,y in data["整體運勢"].items() :
             if x != 'size':
                 if  txt == y:
                     out += f' {x}.'
@@ -66,7 +66,7 @@ class everyday(Cog_Extension):
                     txt  = y
                     out += f'\n> {txt} : {x}.'
         embed.add_field(
-            name=f'級別 ( 0 ~ {data["fortune"]["size"]})',
+            name=f'級別 ( 0 ~ {data["整體運勢"]["size"]})',
             value= out,
             inline=False
             )

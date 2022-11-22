@@ -26,14 +26,16 @@ class eat_dice(Cog_Extension):
     )
     @app_commands.describe(
         action = ">> 進行動作 ?? <<",
-        change = ">> 變更對象 ?? <<"
+        change = ">> 變更對象 ?? <<",
+        add =">> 增加對象 ?? <<"
     )
     async def eat(
         self,
         ctx,
         action: typing.Optional[app_commands.Choice[str]],
-        change: typing.Optional[app_commands.Choice[str]]
-    ):
+        change: typing.Optional[app_commands.Choice[str]],
+        add   : typing.Optional[str]
+        )     : 
         with open('data\\eat.json', newline='',mode='r',encoding="utf8") as reeat: 
             eat = json.load(reeat)
             try:
@@ -52,11 +54,11 @@ class eat_dice(Cog_Extension):
             )
             ans = ""
             if action == "增加":
-                if change in eat["food"]:
+                if add in eat["food"]:
                     ans = f'不可重複增加'
                 else:
-                    ans = f'已增加 {change}'
-                    eat['food'].append(change)
+                    ans = f'已增加 {add}'
+                    eat['food'].append(add)
                 embed.add_field(
                     name   = f'>>  增加餐廳 :',
                     value  = f'> {ans}',
@@ -90,17 +92,18 @@ class eat_dice(Cog_Extension):
                 for name in eat["food"]:
                     names += f'> {name}\n'
                     num += 1
-                
+                if names=="":
+                    names="."
                 embed.add_field(
                     name   = f'>>  餐廳列表 : (有{num}間)',
-                    value  = f'{names}\n>-',
+                    value  = f'{names}',
                     inline = False
                 )
             embed.set_footer(text=self.bot.BotName)
             process_in(
                     project = 'eat',
                     key     = str(datetime.datetime.now()),
-                    text    = f'餐廳骰子 {ctx.author.name}({ctx.author.id}) {action} {change} {ans}'
+                    text    = f'餐廳骰子 {ctx.author.name}({ctx.author.id}) {action} {change} {add} {ans}'
                 )
             await ctx.send(embed=embed)
 async def setup(bot):

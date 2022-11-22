@@ -1,0 +1,32 @@
+{
+    "cSpell.words": [
+        "aclient",
+        "autoload",
+        "BOTID",
+        "datas",
+        "dotenv",
+        "execv",
+        "foodss",
+        "kenji",
+        "recog",
+        "reconfig",
+        "restatus",
+        "restatuses",
+        "seif",
+        "Succesfully",
+        "Tmpi",
+        "Vpwv",
+        "Xlji"
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".vscode": true,
+        "框架": true
+    },
+    "explorerExclude.backup": {}
+}

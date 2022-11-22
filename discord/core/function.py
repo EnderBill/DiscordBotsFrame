@@ -106,7 +106,7 @@ def fortune_in(
     id  : int,
     )   : 
     today = str(datetime.date.today())
-    size  = data["fortune"]["size"]
+    size  = data["整體運勢"]["size"]
     if not os.path.isfile(f'data\\users_data\\{id}.json'):
         with open(f'data\\users_data\\{id}.json',mode='w',encoding="utf8") as reuser:
             user={}
@@ -162,8 +162,8 @@ async def fortune_look(
     )
     if not os.path.isfile(f'data\\users_data\\{user.id}.json'):
         embed.add_field(
-            name   = f'>> {user.mention} :',
-            value  = f'> 未發現資料',
+            name   = f'>> 未發現資料 :',
+            value  = f'> {user.mention}',
             inline = False
         )
     else:
@@ -171,21 +171,21 @@ async def fortune_look(
             users = json.load(reuser)
             if today not in users["個人資料"]["簽到記錄"]:
                 embed.add_field(
-                    name   = f'{user.mention} :',
-                    value  = f'> 今日未簽到',
+                    name   = f'今日未簽到 :',
+                    value  = f'> {user.mention}',
                     inline = False
                 )
             else:
                 embed.add_field(
                     name   = f'{project}運勢 查詢 :',
-                    value  = f'> 查詢 {user.name}{user.mention}',
+                    value  = f'> 查詢 {user.mention}',
                     inline = False
                 )
                 for x, y in users["運勢"][project].items():
-                    if  (x=="整體運勢"):
+                    if  (x=="整體運勢"or x=="外道" or x=="恩典" or x=="怨咒"):
                         embed.add_field(
                             name   = f'{x}',
-                            value  = f'> {data["fortune"][str(y)]}',
+                            value  = f'> {data[str(x)][str(y)]}',
                             inline = False
                             )
                     elif (x=="幸運數字" or x=="貴人星座"): 
@@ -197,7 +197,7 @@ async def fortune_look(
                     else: 
                         embed.add_field(
                             name   = f'{x}',
-                            value  = f'> {data["fortune"][str(y)]}',
+                            value  = f'> {data["整體運勢"][str(y)]}',
                             inline = True
                             )
     embed.set_footer(text=BotName)
