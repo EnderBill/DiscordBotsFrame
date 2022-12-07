@@ -1,0 +1,19 @@
+{
+    "bot_data": {
+        "status": {
+            "online": "online",
+            "offline": "offline",
+            "idle": "idle",
+            "dnd": "dnd",
+            "invisible": "invisible"
+        }
+    },
+    "guilds_data": {
+        "guild_name"   : "",
+        "guild_id"     : 0,
+        "join_model"   : "False",
+        "join_channel" : 0,
+        "remove_model" : "False",
+        "remove_channel": 0
+    }
+}

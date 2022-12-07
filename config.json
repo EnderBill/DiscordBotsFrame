@@ -1,53 +1,14 @@
 {
+    "owner": 0,
     "owners": {
-        "余俊昌": 518361466139574278,
-        "L": 808322801089249290,
-        "B": 640052773307547668
+        "owner": 0,
+        "administrator.1 DiscordID": 0,
+        "administrator.2 DiscordID": 0,
+        "administrator.3 DiscordID": 0
     },
-    "restatuses": "線上",
-    "reactivities": "Try Python",
-
-    "debug_mode": true,
-    
-    "bot_id": 100000000000000000,
-    
-    "dbl_token": "DBL_TOKEN",
-    
-    "webhook": {
-        "webhookAuth": "PASSWORD",
-        "webhookPort": "0000"
-    },
-    "db_credentials": {
-        "user": "DB_USER",
-        "host": "URL",
-        "database": "DB_NAME",
-        "password": "PASSWORD",
-        "port": "5432"
-    },
-    "bot_listings": [
-        {
-            "url": "https://discordbots.org/api/bots/{}/stats",
-            "headers": {
-                "Authorization": "TOKEN"
-            },
-            "payload": {
-                "guild_count": "server_count",
-                "shard_count": "shard_count",
-                "shard_no": "shard_no"
-            },
-            "posts_data": true
-        },
-        {
-            "url": "https://discord.bots.gg/api/v1/bots/{}/stats",
-            "headers": {
-                "Authorization": "TOKEN"
-            },
-            "payload": {
-                "guild_count": "guildCount",
-                "shard_count": "shardCount",
-                "shard_no": "shardId"
-            },
-            "posts_data": false
-        }
-    ]
+    "start": {
+        "status": "idle",
+        "activity": "so difficult Python",
+        "prefix": "QQ"
+    }
 }
